@@ -59,3 +59,26 @@ Para executar o projeto, siga o passo abaixo:
   ```
   python .\src\main.py
   ```
+
+## Funcionamento do arquivo Main:
+
+**Inicialização:**
+
+- O ProcessManager e o Scheduler (com quantum de tempo 3) são criados.
+- Dois processos de exemplo são definidos com instruções de manipulação de memória e operações aritméticas junto com o tempo de execução de cada instrução.
+- Os processos são adicionados ao escalonador.
+
+**Execução da Máquina Virtual:**
+
+- A VirtualMachine é iniciada, utilizando o gerenciador de processos e o escalonador.
+- A máquina virtual executa em loop até que todos os processos estejam terminados.
+- Em cada iteração:
+  - O escalonador seleciona o próximo processo a ser executado.
+  - A máquina virtual simula a execução das instruções do processo durante o quantum de tempo.
+  - O escalonador é notificado sobre o tempo decorrido.
+  - Se um processo termina, o gerenciador de processos é informado para marcá-lo como terminado.
+  - 
+**Simulação de Instruções:**
+
+- A execução de instruções é atualmente com foco em simulação simplificada que imprime as instruções sendo executadas e os processos que terminam no terminal para demonstrar conceitos de gerenciadores de processo, escalonadores e execução de instruções.
+- Em uma implementação completa real, a máquina virtual pode ser expandida com novos conceitos para interpretar e executar as instruções em um ambiente virtualizado, manipulando registradores, alocando memória e outros recursos como um SO.
