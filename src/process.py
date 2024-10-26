@@ -17,4 +17,4 @@ class Process:
         self.tasks = []
 
     def __repr__(self):
-        return f"Process(pid={self.pid}, state={self.state}, pc={self.program_counter})"
+        return f"Processo pid={self.pid}, state={self.state}, pc={self.program_counter}"
